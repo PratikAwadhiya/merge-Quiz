@@ -1,0 +1,140 @@
+
+/* 
+   form {
+    background-color: #c9c6b7f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+  } */
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  } 
+  input[type="text"], textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    margin: 20px;
+    margin-left: 2px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  
+  
+  input[type="text"]:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4CAF50;
+  }
+   
+
+   form {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0e9e9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2px solid gold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="date"] {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-right: 500px;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+
+  /*  */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 5px gold;
+  }
+  
+  nav h4 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* nav mat-icon {
+    font-size: 36px;
+    margin-right: 10px;
+  } */
+  
+  nav div:nth-of-type(2) {
+    display: flex;
+    /* align-items: center; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 600px;
+    margin-top: 5px;
+  }
+  
+  nav div:nth-of-type(2) li {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  nav div:nth-of-type(3) button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  nav div:nth-of-type(3) button:hover {
+    background-color: #3e8e41;
+  }
+  /*  */

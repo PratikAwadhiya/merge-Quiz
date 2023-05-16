@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanbanfire-82427": {
+      "hosting": {
+        "MergeProject": [
+          "kanbanfire-82427"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanbanfire-82427"
+  }
+}

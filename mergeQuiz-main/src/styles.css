@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Set margin and padding to 0 for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center the card horizontally on the page */
+  .mat-card {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  /* Add some space between the card content and the card border */
+  .mat-card-content {
+    padding: 20px;
+  }
+  
+  /* Increase the font size of the question and answer labels */
+  .mat-label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Add some space between the input fields */
+  .mat-form-field {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Reduce the size of the Save button */
+  .mat-card-actions button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  

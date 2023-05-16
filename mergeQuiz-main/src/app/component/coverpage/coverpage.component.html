@@ -1,0 +1,88 @@
+<!-- <p>coverpage works!</p> -->
+
+    <!-- <form #f="ngForm" (ngSubmit)="onSubmit()" > -->
+        <nav>
+            <div>
+            <h4 ><mat-icon>quiz</mat-icon>Quizes</h4>  
+        </div>
+        <div>
+            <li>My_content</li>
+            <li>My Dashboard</li>
+            <li>Notificatin</li>
+            <li>About</li>    
+        </div> 
+
+       
+            <div>
+              <button type="button"  class="btn" >Back</button>
+            </div>
+            </nav>
+        <form #f="ngForm" (ngSubmit)="onSubmit1()">
+        <div>
+            <label >Quiz Title:</label>
+            <input type="text" name="title" placeholder="type title"  [(ngModel)]="title">
+        </div>
+
+        <div>
+            <label >Quiz Description:</label>
+            <textarea id="question-description" name="description" name="discription" [(ngModel)]="description"></textarea>
+        </div>
+
+        <div>
+            <label >Creation Date</label>
+            <input type="date" name="date" [(ngModel)]="date">
+        </div>
+            <br><br>
+    <div>
+    <div >
+        <input type="file" (change)="onFileSelected($event)" name="image"  ngModel>
+   
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" height="100" >
+      </div>
+    </div>  
+     
+    <button type="submit">Save</button>
+
+
+
+<!-- Merge the two component -->
+    <div class="questionpage">
+       
+      <form (ngSubmit)="onSubmit()">
+
+        <label for="question-description">Question:</label>
+  <!-- <textarea id="question-description" name="question-description" ></textarea> -->
+  <!-- <input type="file" id="image-selector" name="image-selector" accept="image/*">  -->
+  <div class="textarea-wrapper">
+      <textarea id="question-description" name="question-description" [(ngModel)]="questiondescription"></textarea>
+  
+      <!-- <input type="file" id="image-selector" name="image-selector" accept="image/*"> -->
+      <!-- <button type="button" id="select-image-button">Select Image</button> -->
+      
+      <!-- <div class="container">
+        <input type="file" (change)="onFileSelected($event)">
+        <button  (click)="uploadImage()">Upload Image</button>
+        <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" height="100">
+      </div>  
+     </div> -->
+    </div>
+  
+   <div class="answer-input">
+          <input type="text" id="answer1" name="answer1" placeholder="option1" [(ngModel)]="answer1">
+          <input type="text" id="answer2" name="answer2" placeholder="option2" [(ngModel)]="answer2">
+        </div>
+      
+        <div class="input-group">
+          <input type="text" id="answer3" name="answer3" placeholder="option3" [(ngModel)]="answer3">
+          <input type="text" id="answer4" name="answer4" placeholder="option4" [(ngModel)]="answer4">
+        </div>
+      
+        <div class="answer-description-group">
+          <label for="answerDescription">Answer Description:</label>
+          <textarea id="answerDescription" name="answerDescription" [(ngModel)]="answerDescription"></textarea>
+        </div>
+        
+        <input type="submit" value="Submit">
+      </form>
+  
+    </div>
