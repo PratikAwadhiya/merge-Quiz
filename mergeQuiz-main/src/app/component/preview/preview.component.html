@@ -1,0 +1,82 @@
+<body>
+  <div>
+    <nav>
+      <div>
+        <h4>Quizzes</h4>
+      </div>
+      <div>
+        <ul>
+          <button mat-raised-button type="btn-1" (click)="goTocoverPage()">Create-Quiz</button>
+          <button mat-raised-button type="btn-2"  (click)="goTohomePage()">Logout</button>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="card-container">
+    <div *ngFor="let item of quiz | async" class="card">
+      <div class="image">
+        <img [src]="item.imageurl" alt="Console Image" />
+      </div>
+      <div class="content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <p>Creation Date: {{ item.date }}</p>
+        <!-- <a class="read-more" (click)="toggleCardExpansion(item)">Read Full Description</a> -->
+      </div>
+      <div class="action">
+        <!-- <input type="checkbox" [checked]="item.selected" (change)="toggleSelection($event,item)"> -->
+        <mat-checkbox
+          [(ngModel)]="item.selected"
+          (ngModelChange)="selectedquestion(item, $event)"
+        ></mat-checkbox>
+        <button mat-raised-button (click)="goTopriviewpage(item.id)">
+          {{ item.DocId }}Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card-container">
+    <div *ngFor="let item of quiz | async" class="card mat-elevation-z2">
+      <mat-card>
+        <mat-card-header>
+          <img mat-card-image [src]="item.imageurl" alt="Console Image">
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-subtitle>{{ item.description }}</mat-card-subtitle>
+        </mat-card-header>
+       
+        <mat-card-content>
+          <p>Creation Date: {{ item.date }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" (click)=" goTopriviewpage()">Preview</button>
+          <button mat-button color="primary">Choose</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div> -->
+
+  <div>
+    <footer>
+      <div class="footer-content">
+        <div mat-card-avatar *ngIf="mergedCardData">
+          <h3>Merged Title: {{ mergedCardData.title }}</h3>
+          <p>Merged Description: {{ mergedCardData.description }}</p>
+          <p>Merged Date: {{ mergedCardData.date }}</p>
+          <!-- Display other merged properties as needed -->
+        </div>
+        <!-- <button mat-raised-button type="button" (click)="openDialog()" class="btn merge-btn" >Merge Quiz</button> -->
+        <button
+          mat-raised-button
+          type="button"
+          class="btn merge-btn"
+          (click)="mergeQuizzes()"
+        >
+          Merge Quiz
+        </button>
+      </div>
+    </footer>
+  </div>
+</body>

@@ -18,12 +18,42 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { PreviewComponent } from './component/preview/preview.component';
+import { PreviewPageComponent } from './component/preview-page/preview-page.component';
+
+import { MatListModule } from '@angular/material/list';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDialogModule} from '@angular/material/dialog';
+// import { Dialog } from '@angular/cdk/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { VerifyemailComponent } from './component/verifyemail/verifyemail.component';
+import { ForgotpasswordComponent } from './component/forgotpassword/forgotpassword.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+
 @NgModule({
   declarations: [
     AppComponent,
     TitlepageComponent,
-    CoverpageComponent
+    CoverpageComponent,
+    PreviewComponent,
+    PreviewPageComponent,
+    DialogExampleComponent,
+    HomeComponent,
+    LoginComponent,
+    SignupComponent,
+    VerifyemailComponent,
+    ForgotpasswordComponent
   ],
+ 
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,9 +62,18 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     MatInputModule,
     MatCardModule ,
+    MatDialogModule,
     ReactiveFormsModule,
+    MatSidenavModule,
+    MatChipsModule,
+    MatListModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatToolbarModule,
+    AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())

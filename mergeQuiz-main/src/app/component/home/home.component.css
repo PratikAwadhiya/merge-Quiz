@@ -1,0 +1,178 @@
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    background-color: #cfcdc5;
+    color: rgb(21, 3, 3);
+    box-shadow: 5px gold;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav h4 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav mat-icon {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+  
+  nav div:nth-of-type(2) {
+    display: flex;
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 600px;
+    margin-top: 5px;
+  }
+  
+  nav div:nth-of-type(2) li {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  nav div:nth-of-type(3) button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  nav div:nth-of-type(3) button:hover {
+    background-color: #3e8e41;
+  } 
+  .mat-toolbar {
+    height: 64px;
+    padding: 0 16px;
+    position: fixed;
+    margin-top: -1rem;
+  }
+  
+  /* Center the text in the navbar */
+  .mat-toolbar span {
+    display: flex;
+    align-items: center;
+    font-size: large;
+  }
+  
+  /* Add some margin to the login button */
+  .mat-toolbar button {
+    margin-left: 1800px;
+    font-weight: 800;
+    font-size: large;
+    color: #0a0a0a;
+    
+  }
+  .mat-toolbar button :hover{
+    background-color: rgb(6, 9, 9);
+
+  }
+
+  .mat-toolbar span {
+    /* Add your styles here */
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a0a0a;
+    font-weight: 800;
+    font-size: large;
+  }
+  
+  .mat-toolbar {
+    background: #fff702e8;/* Replace with your desired color */
+  }
+
+  /* body css */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background-image {
+    /* background-image: url('https://img.freepik.com/premium-photo/blue-question-mark-background-question-marks-3d-illustration_230313-220.jpg?w=1060'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    margin-top: 10px;
+  }
+  
+  .centered-content .img {
+    text-align: center;
+    
+}
+
+p{
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  align-items: center;
+ 
+}
+
+/* Create btn code */
+button.create-quiz-button {
+  background-color: #dfed24;
+  color: #0a0a06;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.create-quiz-button:hover {
+  background-color: #0a0a06;
+  color: #dfed24;
+}
+
+
+
+  /* .create-quiz-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  } */
+  
+
+  /* Login button ka code */
+  button[type="btn"] {
+    background-color: #0a0a06;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="btn"]:hover {
+    background-color: #dfed24;
+    color: #0a0a06;
+  }
+  
+
+
+  .img{
+    height: 45em;
+    width: 1150px;
+  }
+
+
+  /* Add this CSS to make the layout responsive */

@@ -1,0 +1,98 @@
+<nav>
+  <div>
+    <h4><mat-icon></mat-icon>Quizess</h4>
+  </div>
+  <mat-nav-list>
+    <!-- <a mat-list-item (click)="goToCreateQuiz()">Mycontent</a> -->
+    <!-- <a mat-list-item>MyDashboard</a>
+    <a mat-list-item>Notification</a> -->
+    <!-- <a mat-list-item>About</a> -->
+  </mat-nav-list>
+  <div>
+    <button type="button" mat-raised-button (click)="BacktohomePage()">Back</button>
+  </div>
+</nav>
+
+<!-- <ng-container *ngIf="questions.length > 0">
+        <div class="container">
+          <div class="row">
+            <div class="question_card" *ngFor="let question of questions">
+              <div class="question-section">
+                <p class="question-label">Question</p>
+                <p class="question">{{ question. questionText }}</p>
+              </div>
+              <div class="answer-section">
+                <p class="answer-label">Options</p>
+                <div class="options-row" >
+                  <mat-list>
+                    <mat-list-item *ngFor="let option of question.answer">
+                      <mat-icon class="bullet-icon">fiber_manual_record</mat-icon> {{ option }}
+                    <p> {{ option }} </p>
+                      
+                    </mat-list-item>
+                  </mat-list>
+                </div>
+              </div>
+              <div class="coreectanswer" *ngFor="let correctanswer of question.correctAnswer">
+                <p>Coreect Answer</p>
+                <p>{{question.correctAnswer}}</p>
+              </div >
+              <div class="answer-section">
+                <p class="answer-label">Answer Description</p>
+                <p class="answer">{{ question.answerDescription }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container> -->
+
+ <!-- <div *ngIf="questions.length > 0">
+  <div class="container">
+    <div class="row">
+      <div class="question_card" *ngFor="let question of questions">
+        <div class="question-section">
+          <p class="question-label">Question</p>
+          <p class="question">{{ question.questionText }}</p>
+        </div>
+        <div class="answer-section">
+          <p class="answer-label">Options</p>
+          <div class="options-row">
+            <div *ngFor="let option of question.answer" class="option">
+              <p>{{ option }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="correct-answer">
+          <p>Correct Answer</p>
+          <p>{{ question.correctanswer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->
+<ng-container *ngIf="questions.length > 0">
+  <div class="container">
+    <div class="row">
+      <mat-card class="question-card" *ngFor="let question of questions; let i = index">
+        <div class="question-section">
+          <h4 class="mat-subheading-2 question-label">Question{{i+1}}</h4>
+          <p class="question">{{ question.questionText }}</p>
+        </div>
+        <div class="answer-section">
+          <h4 class="mat-subheading-2 answer-label">Options</h4>
+          <div class="options-row">
+            <div *ngFor="let option of question.answer" class="option">
+              <div class="options">
+              <mat-chip>{{ option }}</mat-chip>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="correct-answer">
+          <h4 class="mat-subheading-2">Correct Answer</h4>
+          <p>{{ question.correctanswer }}</p>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</ng-container> 

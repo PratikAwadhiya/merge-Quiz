@@ -1,0 +1,243 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 10px 20px;
+  background-color: #ffc402;
+  color: rgb(21, 3, 3);
+  box-shadow: 5px gold;
+}
+
+nav h4 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav mat-icon {
+  font-size: 36px;
+  margin-right: 10px;
+} */
+
+nav div:nth-of-type(2) {
+  display: flex;
+  /* align-items: center; */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 52px;
+  margin-top: 5px;
+ 
+}
+
+nav div:nth-of-type(2) li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+nav div:nth-of-type(3) button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav div:nth-of-type(3) button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* .container {
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.question_card {
+  flex: 1 1 100%;
+  background-color: #f1efeaa1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.question-section {
+margin-bottom: 10px;
+
+}
+
+.question-label {
+  font-weight: bold;
+}
+
+.question {
+  margin-left: 20px;
+}
+
+.answer-section {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.answer-label {
+  font-weight: bold;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  
+
+
+}
+
+.bullet-icon {
+  margin-right: 5px;
+  vertical-align: middle;
+
+
+
+}
+
+ 
+ container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}  Global Style
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
+
+/* Container */
+.container {
+  /* max-width: 960px; */
+  width: 2000px;
+  margin-left: -155px;
+  margin: 0 auto;
+  margin-right: 500px;
+  padding: 16px;
+  
+}
+
+/* Question Card */
+.question-card {
+  margin-bottom: 16px;
+  padding: 8px 13px;
+  height: 263px;
+  background: aliceblue;
+}
+
+/* Question Section */
+.question-section {
+  margin-bottom: 16px;
+}
+
+.question-label {
+  margin-bottom: 8px;
+}
+
+.question {
+  margin: 0;
+  padding: 10px 9px;
+  font-size: large;
+}
+
+/* Answer Section */
+.answer-section {
+  margin-bottom: 16px;
+}
+
+.answer-label {
+  margin-bottom: 8px;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  margin: 4px;
+
+}
+
+/* Correct Answer Section */
+.correct-answer {
+  margin-top: 5px;
+  padding-top: 3px;
+  font-size: initial;
+}
+
+
+/* mat nav design */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: hsl(60, 98%, 57%); /* Customize the background color */
+  color: rgb(6, 2, 2); /* Customize the text color */
+ 
+}
+
+nav div h4 {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 600;
+}
+
+nav mat-nav-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav mat-nav-list a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 20px;
+}
+
+nav div button {
+  background-color: transparent;
+  border: none;
+  color: rgb(4, 4, 4);
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10em;
+  
+}
+
+/* css for bugtton */
+button[type='button']{
+  color: aliceblue;
+  background-color: black;
+}
+
