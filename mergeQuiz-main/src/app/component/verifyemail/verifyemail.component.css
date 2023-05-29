@@ -1,0 +1,47 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e2ff0a;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Lout {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .Lout h2 {
+    font-size: 24px;
+    color: #190101;
+  }
+  
+  .text-muted {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #1f0707;
+    text-align: center;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #2684ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #007bff;
+  }
+  

@@ -1,73 +1,141 @@
 <!-- <p>coverpage works!</p> -->
 
-    <!-- <form #f="ngForm" (ngSubmit)="onSubmit()" > -->
-        <nav>
-            <div>
-            <h4 ><mat-icon>quiz</mat-icon>Quizes</h4>  
-        </div>
-        <div>
-            <li>My_content</li>
-            <li>My Dashboard</li>
-            <li>Notificatin</li>
-            <li>About</li>    
-        </div> 
+<!-- <form #f="ngForm" (ngSubmit)="onSubmit()" > -->
+<nav>
+  <div>
+    <h4>Quizzes</h4>
+  </div>
+  <div>
+    <!-- <li>My_content</li> -->
+    <button mat-raised-button type="btn" (click)="goToMyContent()">
+      My_content
+    </button>
+  </div>
+</nav>
 
-       
-            <div>
-              <button type="button"  class="btn" >Back</button>
-            </div>
-            </nav>
-        <form #f="ngForm" (ngSubmit)="onSubmit1()">
-        <div>
-            <label >Quiz Title:</label>
-            <input type="text" name="title" placeholder="type title"  [(ngModel)]="title">
-        </div>
-
-        <div>
-            <label >Quiz Description:</label>
-            <textarea id="question-description" name="description" name="discription" [(ngModel)]="description"></textarea>
-        </div>
-
-        <div>
-            <label >Creation Date</label>
-            <input type="date" name="date" [(ngModel)]="date">
-        </div>
-            <br><br>
-    <div>
-    <div >
-        <input type="file" (change)="onFileSelected($event)" name="image"  ngModel>
-   
-    <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" height="100" >
+<div class="form-container">
+  <div class="card-container">
+    <form (ngSubmit)="onSubmit1()" #f="ngForm">
+      <div class="form-field">
+        <label>Quiz Title:</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Type title"
+          [(ngModel)]="title"
+        />
       </div>
-    </div>  
-     
-    <button type="submit">Save</button>
 
+      <div class="form-field">
+        <label>Quiz Description:</label>
+        <textarea
+          id="question-description"
+          name="description"
+          [(ngModel)]="description"
+        ></textarea>
+      </div>
 
+      <div class="form-field">
+        <label>Creation Date:</label>
+        <input type="date" name="date" [(ngModel)]="date" />
+      </div>
 
-<!-- Merge the two component -->
-    <div class="questionpage">
-       
-      <form (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <label for="coverPicture">Cover Image:</label>
+        <input
+          type="file"
+          id="coverPicture"
+          (change)="displayImage($event)"
+          (change)="upload($event)"
+        />
 
-        <label for="question-description">Question:</label>
-  <!-- <textarea id="question-description" name="question-description" ></textarea> -->
-  <!-- <input type="file" id="image-selector" name="image-selector" accept="image/*">  -->
-  <div class="textarea-wrapper">
-      <textarea id="question-description" name="question-description" [(ngModel)]="questiondescription"></textarea>
-  
-      <!-- <input type="file" id="image-selector" name="image-selector" accept="image/*"> -->
-      <!-- <button type="button" id="select-image-button">Select Image</button> -->
-      
-      <!-- <div class="container">
-        <input type="file" (change)="onFileSelected($event)">
-        <button  (click)="uploadImage()">Upload Image</button>
-        <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" height="100">
-      </div>  
-     </div> -->
-    </div>
-  
-   <div class="answer-input">
+        <div class="image-container">
+          <img *ngIf="imageurl" [src]="imageurl" alt="Selected Image" />
+        </div>
+        <button class="upload-button" (click)="uploadImage()">
+          Upload Image
+        </button>
+      </div>
+
+      <button type="submit" class="save-button">Save</button>
+
+      <!-- Merge the two component -->
+      <div class="questionpage">
+        <form (ngSubmit)="onSubmit()">
+          <div
+            *ngFor="let question of questions; let i = index"
+            class="question-container"
+          >
+            <label for="question-description{{ i }}"
+              >Question {{ i + 1 }}:</label
+            >
+            <div class="textarea-wrapper">
+              <textarea
+                id="question-description{{ i }}"
+                name="question-description{{ i }}"
+                [(ngModel)]="question.question"
+              ></textarea>
+            </div>
+            <div class="answer-input">
+              <input
+                type="text"
+                id="answer1{{ i }}"
+                name="answer1{{ i }}"
+                placeholder="Option 1"
+                [(ngModel)]="question.options[0]"
+              />
+              <input
+                type="text"
+                id="answer2{{ i }}"
+                name="answer2{{ i }}"
+                placeholder="Option 2"
+                [(ngModel)]="question.options[1]"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="answer3{{ i }}"
+                name="answer3{{ i }}"
+                placeholder="Option 3"
+                [(ngModel)]="question.options[2]"
+              />
+              <input
+                type="text"
+                id="answer4{{ i }}"
+                name="answer4{{ i }}"
+                placeholder="Option 4"
+                [(ngModel)]="question.options[3]"
+              />
+            </div>
+
+            <div class="answer-description-group">
+              <label for="answerDescription{{ i }}">Answer Description:</label>
+              <textarea
+                id="answerDescription{{ i }}"
+                name="answerDescription{{ i }}"
+                [(ngModel)]="question.answerDescription"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button
+              type="button"
+              class="add-question-button"
+              (click)="addQuestion()"
+            >
+              Add Question
+            </button>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- <div class="answer-input">
           <input type="text" id="answer1" name="answer1" placeholder="option1" [(ngModel)]="answer1">
           <input type="text" id="answer2" name="answer2" placeholder="option2" [(ngModel)]="answer2">
         </div>
@@ -85,4 +153,4 @@
         <input type="submit" value="Submit">
       </form>
   
-    </div>
+    </div> -->

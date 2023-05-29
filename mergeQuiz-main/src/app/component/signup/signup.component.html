@@ -1,0 +1,54 @@
+<!-- <p>signup works!</p> -->
+<div class="container">
+    <form>
+      <div class="login">
+        <h1>Signup-Form</h1>
+      </div>
+    
+      <div class="mb">
+        <label for="exampleInputEmail">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          [(ngModel)]="email"
+          id="exampleInputEmail"
+          aria-describedby=""
+        />
+      </div>
+    
+      <div class="mb-2">
+        <label for="exampleInputPassword">Enter Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="password"
+          id="exampleInputPassword"
+          aria-describedby=""
+        />
+      </div>
+    
+      <!-- <div class="mb-3">
+                            <label for="exampleInputPhoneno">Enter Phoneno</label>
+                            <input type="number" class="form-control" id="exampleInputPhoneno" aria-describedby="">
+                        </div>
+    
+                        <div class="mb-4">
+                            <label for="exampleInputAddress">Enter Address</label>
+                            <input type="text" class="form-control" id="exampleInputPassword" aria-describedby="">
+                        </div> -->
+    
+      <button type="button" (click)="signup()" class="btn">Signup</button>
+    
+      <div class="msg">
+        <a [routerLink]="['/login']" style="text-decoration: none"
+          >Already have an account?<span class="text-danger">Login here..</span></a
+        >
+      </div>
+    
+      <!-- <div class="msg-2">
+                            <a  [routerLink]="['/forgot']"  class="text-dark" style="text-decoration: none;"> Forgot password..? </a>
+                        </div> -->
+    </form>
+    </div>

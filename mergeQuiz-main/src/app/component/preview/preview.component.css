@@ -1,0 +1,260 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+
+  .card {
+    width: 203px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .card .image {
+    text-align: center;
+  }
+
+  .card .image img {
+    width: 96%;
+    height: 150px; /* Adjust the height as per your needs */
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+
+  .card .content {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .card .action {
+    text-align: center;
+  }
+
+  .card button {
+    padding: 5px 10px;
+    background-color: #f6ee0de9;
+    color: #000000;
+    border: none;
+    /* border-radius: 10px; */
+    cursor: pointer;
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  .card button:hover {
+    background-color: #f6efef;
+  }
+
+  .card .read-more {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .card .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* css footer */
+  footer {
+    background-color: hsl(60, 12%, 85%);
+    padding: 25px;
+    text-align: center;
+    margin-top: 54.1em;
+    width: 123rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 14px;
+  }
+  
+  .merge-btn {
+    background-color: #efeee5;
+    color: rgb(248, 248, 248);
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  .merge-btn:hover {
+    background-color: #fefefef5;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #b3afa0;
+    color: rgb(21, 3, 3);
+    box-shadow: 5px rgb(253, 252, 248);
+    height: 5vh;
+   } 
+  
+  nav h4 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* nav mat-icon {
+    font-size: 36px;
+    margin-right: 10px;
+  } */
+  
+  nav div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 600px;
+    margin-top: 5px;
+  }
+  
+  /* nav div:nth-of-type(2) li {
+    margin-right: 20px;
+    cursor: pointer;
+    margin-left: -2em;
+    width: 133px;
+  } */
+  
+  /* nav div:nth-of-type(3) button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  } */
+  
+  /* nav div:nth-of-type(3) button:hover {
+    background-color: #3e8e41;
+  } */
+
+  
+
+  /* Mat-Nav */
+
+  /* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125.5rem;
+  }
+  
+  .menu-items ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button button {
+    margin-left: 16px;
+  } */
+/*   
+  nav {
+    display: flex;
+    align-items: center;
+    height: 64px; 
+    background-color: #1976d2; 
+    color: rgb(0, 0, 0);
+    padding: 0 16px;
+  } */
+  
+  /* nav div:first-child {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+   */
+  /* nav mat-icon {
+    font-size: 24px;
+    margin-right: 8px;
+  } */
+  
+  /* nav h4 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: large;
+    margin-right: 18em;
+  } */
+  
+  /* nav li {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 120px;
+  } */
+  
+  /* nav li:hover {
+    color: #f5f5f5; /* Replace with your desired hover color */
+  /* }  */
+  
+  /* nav div:last-child {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav{
+    background-color: hsl(60, 98%, 57%);
+  } */
+
+  /* mat-navlist css */
+  
+button[type="btn-1"],
+button[type="btn-2"] {
+  background-color: #0f0f0e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button[type="btn-1"]:hover,
+button[type="btn-2"]:hover {
+background-color: #eae8db;
+color: #000000;
+}

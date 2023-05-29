@@ -1,0 +1,56 @@
+
+<div class="container">
+    <form>
+      <div class="login">
+        <h1>Login-Form</h1>
+      </div>
+  
+      <div class="mb">
+        <label for="exampleInputEmail1">Enter Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="exampleInputEmail1"
+          [(ngModel)]="email"
+          aria-describedby="emailHelp"
+        />
+      </div>
+  
+      <div class="mb2">
+        <label for="exampleInputEmail1">Enter Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="exampleInputEmail1"
+          [(ngModel)]="password"
+          aria-describedby="emailHelp"
+        />
+      </div>
+  
+      <button type="button" (click)="login()" class="btn">Login</button>
+  
+      <div class="msg">
+        <a [routerLink]="['/signup']" style="text-decoration: none">
+          Don't have an account? <span class="text-danger">Signup here..</span></a
+        >
+      </div>
+  
+      <div class="msg-2">
+        <a
+          [routerLink]="['/forgot']"
+          class="text-dark"
+          style="text-decoration: none"
+        >
+          Forgot password..?
+        </a>
+      </div>
+      <div class="car shadow text-center">
+      <a (click)="signInWithGoogle()" style="text-decoration: none;">
+        <img src="../../../assets/iconG.png" alt="" height="30px" width="30px">Sign In with the Google
+      </a>
+      </div>
+    </form>
+  </div>
+  
