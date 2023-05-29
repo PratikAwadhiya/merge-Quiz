@@ -73,9 +73,9 @@
 <ng-container *ngIf="questions.length > 0">
   <div class="container">
     <div class="row">
-      <mat-card class="question-card" *ngFor="let question of questions">
+      <mat-card class="question-card" *ngFor="let question of questions; let i = index">
         <div class="question-section">
-          <h4 class="mat-subheading-2 question-label">Question</h4>
+          <h4 class="mat-subheading-2 question-label">Question{{i+1}}</h4>
           <p class="question">{{ question.questionText }}</p>
         </div>
         <div class="answer-section">

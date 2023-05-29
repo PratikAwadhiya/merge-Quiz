@@ -70,17 +70,14 @@ export class PreviewPageComponent implements OnInit{
        
         const questionsQuery = query(questionsRef);
         getDocs(questionsQuery).then((questionsSnapshot) => {
+          
            questionsSnapshot.forEach((Doc) => {
-             
               const questionData = Doc.data();
-  
              //  console.log(doc.id, '=>', doc.data());
-            
-            
                 this.questions.push(questionData);
                console.log( 'question Data add',questionData)
               });
-  
+              
                });
   
            });
